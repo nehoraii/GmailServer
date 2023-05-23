@@ -13,10 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/sendGmail")
 public class SendGmail {
-    @GetMapping("/xk")
-    public String print(){
-        return "hello";
-    }
     @GetMapping("/send")
     public void sendGmail(@RequestBody GmailVo gmailVo){
         GmailQuickStart.sendGmail(gmailVo.getSendTo(),gmailVo.getMassage());
